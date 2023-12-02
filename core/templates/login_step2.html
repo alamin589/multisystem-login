@@ -1,0 +1,23 @@
+<!-- login_password.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Password</title>
+</head>
+<body>
+
+<h2>Login - Enter Password</h2>
+
+<form method="post" action="{% url 'login_step2' %}">
+    {% csrf_token %}
+    <input type="hidden" name="email" value="{{ email }}">
+    <label for="password">Password:</label>
+    <input type="password" name="password" required>
+    <button type="submit">Login</button>
+</form>
+
+</body>
+</html>
